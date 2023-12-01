@@ -269,6 +269,8 @@ Note: Make sure you're in your ```ansible-config-mgt``` directory before you run
 
 You can go to each of the servers and check if ```wireshark``` has been installed by running ```which wireshark``` or ```wireshark version```
 
+![ansible](images/13.jpg)
+
 ## Optional step - Repeat once again
 
 Update your ansible playbook with some new Ansible tasks and go through the full checkout -> change codes -> commit -> PR -> merge -> build -> ansible-playbook cycle again to see how easily you can manage a servers fleet of any size with just one command!
