@@ -269,6 +269,8 @@ Note: Make sure you're in your ```ansible-config-mgt``` directory before you run
 
 You can go to each of the servers and check if ```wireshark``` has been installed by running ```which wireshark``` or ```wireshark version```
 
+The architecture looks like this:
+
 ![ansible](images/13.jpg)
 
 ## Optional step - Repeat once again
