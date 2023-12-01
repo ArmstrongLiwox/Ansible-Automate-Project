@@ -10,17 +10,28 @@ It can configure systems, deploy software, and orchestrate advanced workflows to
 
 Ansible's main strengths are simplicity and ease of use.
 
+> Ansible is an automation engine that helps us to automate tasks that are cumbersome, repititive and complex.
+ It makes work easier for the DevOps department. 
+
 > Ansible Client as a Jump Server (Bastion Host)
 
 A Jump Server (sometimes also referred as Bastion Host) is an intermediary server through which access to internal network can be provided. 
 
-With the current architecture I are working on, ideally, the webservers would be inside a secured network which cannot be reached directly from the Internet. 
+With the current architecture I will be working on, ideally, the webservers would be inside a secured network which cannot be reached directly from the Internet. 
 
 That means, even DevOps engineers cannot SSH into the Web servers directly and can only access it through a Jump Server - it provides better security and reduces attack surface.
 
 On the diagram below the Virtual Private Network (VPC) is divided into two subnets - Public subnet has public IP addresses and Private subnet is only reachable by private IP addresses.
 
 ![ansible setup](<images/ansible setup.jpg>)
+
+## What is configuration management?
+
+Configuration management is a process for maintaining computer systems, servers, applications, network devices, and other IT components in a desired state. It’s a way to help ensure that a system performs as expected, even after many changes are made over time. 
+
+Using configuration management tools, administrators can set up an IT system, such as a server or workstation, then build and maintain other servers and workstations with the same settings. IT teams use configuration assessments and drift analyses to continuously identify systems that have strayed from the desired system state and need to be updated, reconfigured, or patched.
+
+https://www.redhat.com/en/topics/automation/what-is-configuration-management#:~:text=Configuration%20management%20is%20a%20process,in%20a%20desired%2C%20consistent%20state.&text=Managing%20IT%20system%20configurations%20involves,building%20and%20maintaining%20those%20systems.
 
 
 ## Install and configure ansible on ec2 instance
