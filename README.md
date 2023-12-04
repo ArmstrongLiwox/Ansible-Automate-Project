@@ -89,15 +89,35 @@ ansible --version
 
 ![ansible version](<images/ansible version.jpg>)
 
-### 4. Configure Jenkins build job to archive your repository content every time you change it 
+## 4. Configure Jenkins build job to archive your repository content every time you change it 
 
-- this will solidify your Jenkins configuration skills acquired in Project 9.
+> this will solidify your Jenkins configuration skills acquired in Project 9.
 
-- Create a new Freestyle project ```ansible``` in Jenkins and point it to your 'ansible-config-mgt' repository.
 
-- Configure a webhook in GitHub and set the webhook to trigger ```ansible``` build.
+### Create a new Freestyle project ```ansible``` in Jenkins and point it to your 'ansible-config-mgt' repository.
 
-- Configure a Post-build job to save all (**) files, like you did it in Project 9.
+![new free style](<images/new freestyle.jpg>)
+
+![ansible freestyle](<images/ansible freestyle.jpg>)
+
+![git url](<images/paste git url.jpg>)
+
+
+
+### Configure a webhook in GitHub and set the webhook to trigger ```ansible``` build.
+
+![github web-hook](<images/github webhook.jpg>)
+
+![hook trigger](<images/hook trigger.jpg>)
+
+### Configure a Post-build job to save all (**) files, like you did it in Project 9.
+
+
+![freestyle](images/freestyle.jpg)
+
+![freestyles](images/freestyles.jpg)
+
+![restart](<images/jenkens restart.jpg>)
 
 ### 5. Test your setup by making some change in README.md file in *master branch* and make sure that builds starts automatically and Jenkins saves the files (build artifacts) in following folder
 
