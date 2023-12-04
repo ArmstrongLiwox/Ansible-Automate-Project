@@ -125,10 +125,31 @@ jenkins-plugin-cli --plugins strict-crumb-issuer:2.1.1
 
 ### 5. Test your setup by making some change in README.md file in *master branch* and make sure that builds starts automatically and Jenkins saves the files (build artifacts) in following folder
 
+![build confirm](<images/build confirm.jpg>)
+
+![build confirm 1](<images/build confirm 1.jpg>)
+
+![build confirm 2](<images/build confirm 2.jpg>)
+
+![build confirm 3](<images/build confirm 3.jpg>)
+
+
+
 ```
 ls /var/lib/jenkins/jobs/ansible/builds/<build_number>/archive/
 ```
+
+```
+sudo ls /var/lib/jenkins/jobs/Ansible/builds/3/archive/
+```
+
 Note: Trigger Jenkins project execution only for main (or master) branch.
+
+
+```
+sudo cat /var/lib/jenkins/jobs/Ansible/builds/3/archive/README.md
+```
+![build 4](<images/build confirm 4.jpg>)
 
 Now your setup will look like this:
 
