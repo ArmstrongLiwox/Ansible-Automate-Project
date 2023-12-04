@@ -42,9 +42,29 @@ https://www.redhat.com/en/topics/automation/what-is-configuration-management#:~:
 
 ![instance](images/instance.jpg)
 
-![connect](images/connect.jpg)
+![connect](<images/instance connect.jpg>)
 
+https://www.jenkins.io/doc/book/installing/linux/#debianubuntu
 
+![java version](<images/java version.jpg>)
+
+![jenkens status](<images/jenkens running.jpg>)
+
+![8080](<images/port 8080.jpg>)
+
+![password location](<images/jenkins password location.jpg>)
+
+![pluggins](images/pluggins.jpg)
+
+```
+c3afcdc699134aeba62a8eead05fca4f
+```
+
+![user](images/user.jpg)
+
+![jenkens ready](<images/jenkens ready.jpg>)
+
+![jenkens good to go](<images/jekens good.jpg>)
 
 2. In your GitHub account create a new repository and name it ansible-config-mgt.
 
