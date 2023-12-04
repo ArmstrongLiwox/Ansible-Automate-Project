@@ -112,6 +112,10 @@ ansible --version
 
 ### Configure a Post-build job to save all (**) files, like you did it in Project 9.
 
+```
+jenkins-plugin-cli --plugins strict-crumb-issuer:2.1.1
+```
+![firewall](images/firewall.jpg)
 
 ![freestyle](images/freestyle.jpg)
 
