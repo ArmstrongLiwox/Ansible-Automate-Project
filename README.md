@@ -42,6 +42,8 @@ https://www.redhat.com/en/topics/automation/what-is-configuration-management#:~:
 
 ![instance](images/instance.jpg)
 
+![instance rename](<images/instance running.jpg>)
+
 ![connect](<images/instance connect.jpg>)
 
 https://www.jenkins.io/doc/book/installing/linux/#debianubuntu
