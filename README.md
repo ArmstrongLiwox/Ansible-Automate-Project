@@ -40,7 +40,17 @@ https://www.redhat.com/en/topics/automation/what-is-configuration-management#:~:
 
 1. Update the Name tag on your Jenkins EC2 Instance to Jenkins-Ansible. We will use this server to run playbooks.
 
+![instance](images/instance.jpg)
+
+![connect](images/connect.jpg)
+
+
+
 2. In your GitHub account create a new repository and name it ansible-config-mgt.
+
+![git repo](<images/git repo.jpg>)
+
+https://github.com/ArmstrongLiwox/ansible-config-mgt.git
 
 3. Install Ansible (see: install Ansible with pip)
 
@@ -54,6 +64,8 @@ sudo apt install ansible
 ```
 ansible --version
 ```
+
+![ansible version](<images/ansible version.jpg>)
 
 ### 4. Configure Jenkins build job to archive your repository content every time you change it 
 
