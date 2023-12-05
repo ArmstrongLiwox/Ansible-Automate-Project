@@ -431,31 +431,52 @@ git commit -m "commit message"
 ```
 ![update branch repo](<images/update branch repo.jpg>)
 
+
+2. Create a Pull request (PR)
+
 ![pull request](<images/pull request.jpg>)
 
 ![pull](<images/pull request 1.jpg>)
 
+
+3. Wear the hat of another developer for a second, and act as a reviewer.
+
 ![merge](<images/pull merge.jpg>)
+
+
+4. If the reviewer is happy with your new feature development, merge the code to the master branch.
 
 ![merge 1](<images/merge 1.jpg>)
 
 ![merged](images/merged.jpg)
 
-2. Create a Pull request (PR)
-
-3. Wear the hat of another developer for a second, and act as a reviewer.
-
-4. If the reviewer is happy with your new feature development, merge the code to the master branch.
-
 5. Head back on your terminal, checkout from the feature branch into the master, and pull down the latest changes.
 
+![git pull](<images/git pull.jpg>)
+
+![updated](images/updated.jpg)
+
+![updated in main](<images/updated in main.jpg>)
+
 Once your code changes appear in master branch - Jenkins will do its job and save all the files (build artifacts) to
+
+![ansible build 4](<images/ansible build 4.jpg>)
+
+![ansible build successful](<images/ansible build4.jpg>)
 
 ```
 /var/lib/jenkins/jobs/ansible/builds/<build_number>/archive/
 ``` 
 
+```
+sudo ls /var/lib/jenkins/jobs/Ansible/builds/4/archive
+```
+
 directory on ```Jenkins-Ansible``` server.
+
+> confirm files in ansible server
+
+![confirm files in ansible server](<images/confirm files.jpg>)
 
 # Run first ansible test
 
