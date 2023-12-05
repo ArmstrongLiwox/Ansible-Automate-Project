@@ -283,6 +283,11 @@ Update your ```inventory/dev.yml``` file with this snippet of code:
 [lb]
 <Load-Balancer-Private-IP-Address> ansible_ssh_user=ubuntu
 ```
+![spin instances](<images/spin 4 instances.jpg>)
+
+![instances running](<images/instance running 1.jpg>)
+
+![instances renamed](<images/instance running 2.jpg>)
 
 # Create a common playbook
 
