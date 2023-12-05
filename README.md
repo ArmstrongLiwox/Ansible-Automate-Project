@@ -180,8 +180,15 @@ we will use Visual Studio Code (VSC).
 3. Clone down your ansible-config-mgt repo to your Jenkins-Ansible instance
 
 ```
+git init
+```
+
+```
 git clone <ansible-config-mgt repo link>
 ```
+![git init](<images/git init.jpg>)
+
+![git clone](<images/git clone.jpg>)
 
 # Begin ansible development
 
