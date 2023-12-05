@@ -553,19 +553,17 @@ or
 wireshark version
 ```
 
+![wireshark successful](<images/wireshark successful.jpg>)
+
 ![playbooked worked](<images/playbook worked.jpg>)
 
 
 # SUCCESS !!!
 
+We have just automated our routine tasks by implementing Ansible project! 
+
+
 The architecture looks like this:
 
 ![ansible](images/13.jpg)
-
-## Optional step - Repeat once again
-
-Update your ansible playbook with some new Ansible tasks and go through the full checkout -> change codes -> commit -> PR -> merge -> build -> ansible-playbook cycle again to see how easily you can manage a servers fleet of any size with just one command!
-Congratulations
-
-You have just automated your routine tasks by implementing your first Ansible project! There is more exciting projects ahead, so lets keep it moving!
 
