@@ -527,7 +527,17 @@ ansible-playbook -i /var/lib/jenkins/jobs/Ansible/builds/4/archive/inventory/dev
 
 Note: Make sure you're in your ```ansible-config-mgt``` directory before you run the above command.
 
-You can go to each of the servers and check if ```wireshark``` has been installed by running ```which wireshark``` or ```wireshark version```
+You can go to each of the servers and check if ```wireshark``` has been installed by running 
+
+```
+which wireshark
+``` 
+
+or 
+
+```
+wireshark version
+```
 
 The architecture looks like this:
 
