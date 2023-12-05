@@ -534,6 +534,8 @@ ansible-playbook -i /var/lib/jenkins/jobs/Ansible/builds/4/archive/inventory/dev
 
 ![play recap](<images/play recap.jpg>)
 
+![playbooked worked](<images/playbook worked.jpg>)
+
 ![running](images/running.jpg)
 
 ![success](images/success.jpg)
@@ -555,7 +557,7 @@ wireshark version
 
 ![wireshark successful](<images/wireshark successful.jpg>)
 
-![playbooked worked](<images/playbook worked.jpg>)
+
 
 
 # SUCCESS !!!
