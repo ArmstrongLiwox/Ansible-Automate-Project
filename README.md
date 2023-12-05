@@ -402,7 +402,8 @@ Feel free to update this playbook with following tasks:
 
 • Run some shell script
 
-Get a better understanding of Ansible playbooks.
+Get a better understanding of Ansible playbooks. 
+https://www.redhat.com/en/topics/automation/what-is-an-ansible-playbook
 
 ## Step 6 - Update GIT with the latest code
 
@@ -488,6 +489,23 @@ Now, it is time to execute ```ansible-playbook``` command and verify if your pla
 Now run your playbook using the command:
 
 
+![remote host connect](<images/remote host connect.jpg>)
+
+```
+# Read more about SSH config files: https://linux.die.net/man/5/ssh_config
+Host Jenkens-Ansible
+    HostName 3.120.33.54
+    User ubuntu
+    IdentityFile C:\Users\user\Documents\documents\key\NFS
+    ForwardAgent yes
+    ControlPath /tmp/ansible-ssh-%h-%p-%r
+    ControlMaster auto
+    ControlPersist 10m
+```
+
+![edit ssh config file](<images/edit configuration file.jpg>)
+
+
 ```
 cd ansible-config-mgt
 ```
@@ -496,6 +514,16 @@ ansible-playbook -i inventory/dev.yml playbooks/common.yml
 ```
 
 ansible-playbook -i inventory/dev.yml playbooks/common.yml
+
+```
+ansible-playbook -i /var/lib/jenkins/jobs/Ansible/builds/4/archive/inventory/dev.yml /var/lib/jenkins/jobs/Ansible/builds/4/archive/playbooks/common.yml
+```
+![playbook running](<images/playbook running.jpg>)
+
+![playbook failed](<images/playbook failed.jpg>)
+
+![play recap](<images/play recap.jpg>)
+
 
 Note: Make sure you're in your ```ansible-config-mgt``` directory before you run the above command.
 
