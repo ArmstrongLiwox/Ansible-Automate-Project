@@ -541,6 +541,10 @@ wireshark version
 
 ![playbooked worked](<images/playbook worked.jpg>)
 
+![running](images/running.jpg)
+
+![success](images/success.jpg)
+
 The architecture looks like this:
 
 ![ansible](images/13.jpg)
