@@ -223,12 +223,27 @@ To learn how to setup SSH agent and connect VS Code to your Jenkins-Ansible inst
 
 • For Linux users - ssh-agent on linux
 
+![ssh](images/ssh.jpg)
+
 ```
 eval `ssh-agent -s`
 ```
+![ssh 1](<images/ssh 1.jpg>)
+
 ```
 ssh-add <path-to-private-key>
 ```
+
+```
+ssh-add nfs.pem
+```
+
+```
+ssh-add C:\Users\user\Documents\documents\key\NFS\nfs.pem
+```
+
+![log back in](<images/log back in.jpg>)
+
 > Confirm the key has been added with the command below, you should see the name of your key
 
 ```
