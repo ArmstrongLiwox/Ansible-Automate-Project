@@ -569,3 +569,4 @@ The architecture looks like this:
 
 ![ansible](images/13.jpg)
 
+![great job](<images/great job.jpg>)
