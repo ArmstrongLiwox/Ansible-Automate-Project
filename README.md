@@ -302,21 +302,27 @@ Update your ```inventory/dev.yml``` file with this snippet of code:
 > populate the dev.yml file with IP addresses of servers
 
 ```
-[nfs]
-172.31.29.51 ansible_ssh_user=ec2-user
+[J-NFS]
+172.31.29.51 ansible_ssh_user='ec2-user'
 
-[webservers]
-172.31.23.13 ansible_ssh_user=ec2-user
-172.31.19.199 ansible_ssh_user=ec2-user
+[J-Web1]
+172.31.23.13 ansible_ssh_user='ec2-user'
 
-[db]
-172.31.20.112 ansible_ssh_user=ec2-user 
+[J-Web2]
+172.31.19.199 ansible_ssh_user='ec2-user'
 
-[lb]
-172.31.23.19 ansible_ssh_user=ubuntu
+[J-DB]
+172.31.20.112 ansible_ssh_user='ec2-user' 
+
+[J-LB]
+172.31.23.19 ansible_ssh_user='ubuntu'
 ```
 
 ![dev.yml](images/dev.yml.jpg)
+
+![dev yml](images/dev.jpg)
+
+![servers](images/servers.jpg)
 
 # Create a common playbook
 
@@ -356,8 +362,8 @@ Update your ```playbooks/common.yml``` file with following code:
 
 ```
 ---
-- name: update web, nfs and db servers
-  hosts: webservers, nfs, db
+- name: update J-Web1, J-Web2,  J-NFS, and J-DB servers
+  hosts: J-Web1, J-Web2, J-NFS, J-DB
   remote_user: ec2-user
   become: yes
   become_user: root
@@ -368,8 +374,10 @@ Update your ```playbooks/common.yml``` file with following code:
         state: latest
    
 
-- name: update LB server
-  hosts: lb
+   #=============================================
+
+- name: update J-LB server
+  hosts: J-LB
   remote_user: ubuntu
   become: yes
   become_user: root
@@ -385,6 +393,8 @@ Update your ```playbooks/common.yml``` file with following code:
 ```
 
 ![playbook.yml](<images/playbook yml.jpg>)
+
+![common yml](images/common.jpg)
 
 Examine the code above and try to make sense out of it. 
 
@@ -524,9 +534,13 @@ ansible-playbook -i /var/lib/jenkins/jobs/Ansible/builds/4/archive/inventory/dev
 
 ![play recap](<images/play recap.jpg>)
 
+![running](images/running.jpg)
 
-Note: Make sure you're in your ```ansible-config-mgt``` directory before you run the above command.
+![success](images/success.jpg)
 
+# HURRAY !!!
+
+> Note: Make sure you're in your ```ansible-config-mgt``` directory before you run the above command.
 You can go to each of the servers and check if ```wireshark``` has been installed by running 
 
 ```
@@ -541,11 +555,8 @@ wireshark version
 
 ![playbooked worked](<images/playbook worked.jpg>)
 
-![running](images/running.jpg)
 
-![success](images/success.jpg)
-
-# HURRAY !!!
+# SUCCESS !!!
 
 The architecture looks like this:
 
