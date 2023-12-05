@@ -242,19 +242,27 @@ ssh-add nfs.pem
 ssh-add C:\Users\user\Documents\documents\key\NFS\nfs.pem
 ```
 
-![log back in](<images/log back in.jpg>)
+
+
+> persist the key on the server
 
 > Confirm the key has been added with the command below, you should see the name of your key
 
 ```
-ssh-add -1
+ssh-add -l
+```
+![persist key](<images/persist key.jpg>)
+
+> Now, ssh into your Jenkins-Ansible server using ssh-agent
+
+```
+ssh -A ubuntu@3.120.33.54
 ```
 
-Now, ssh into your Jenkins-Ansible server using ssh-agent
 
-```
-ssh -A ubuntu@public-ip
-```
+![log back in](<images/log back in.jpg>)
+
+![logged in](<images/logged in.jpg>)
 
 > learn how to setup SSH agent and connect VS Code to your Jenkins-Ansible instance
 
