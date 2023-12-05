@@ -536,6 +536,12 @@ ansible-playbook -i /var/lib/jenkins/jobs/Ansible/builds/4/archive/inventory/dev
 
 ![playbooked worked](<images/playbook worked.jpg>)
 
+>confirm if ssh agent is copying the public key to the jenkins server
+
+```
+ssh-add -l
+```
+
 ![running](images/running.jpg)
 
 ![success](images/success.jpg)
