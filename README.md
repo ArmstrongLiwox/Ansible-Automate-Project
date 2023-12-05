@@ -289,6 +289,35 @@ Update your ```inventory/dev.yml``` file with this snippet of code:
 
 ![instances renamed](<images/instance running 2.jpg>)
 
+> Check if I can connect into any of the new servers just created (using the same key) 
+
+![check instance connect](<images/check instance connectivity.jpg>)
+
+![instance connect](<images/check instance connectivity 1.jpg>)
+
+![red hat connect](<images/red hat connect.jpg>)
+
+![red hat connected](<images/red hat connect 1. jpg.jpg>)
+
+> populate the dev.yml file with IP addresses of servers
+
+```
+[nfs]
+172.31.29.51 ansible_ssh_user=ec2-user
+
+[webservers]
+172.31.23.13 ansible_ssh_user=ec2-user
+172.31.19.199 ansible_ssh_user=ec2-user
+
+[db]
+172.31.20.112 ansible_ssh_user=ec2-user 
+
+[lb]
+172.31.23.19 ansible_ssh_user=ubuntu
+```
+
+![dev.yml](images/dev.yml.jpg)
+
 # Create a common playbook
 
 ## Step 5 - Create a Common Playbook
@@ -324,6 +353,38 @@ Update your ```playbooks/common.yml``` file with following code:
         name: wireshark
         state: latest
 ```
+
+```
+---
+- name: update web, nfs and db servers
+  hosts: webservers, nfs, db
+  remote_user: ec2-user
+  become: yes
+  become_user: root
+  tasks:
+    - name: ensure wireshark is at the latest version
+      yum:
+        name: wireshark
+        state: latest
+   
+
+- name: update LB server
+  hosts: lb
+  remote_user: ubuntu
+  become: yes
+  become_user: root
+  tasks:
+    - name: Update apt repo
+      apt: 
+        update_cache: yes
+
+    - name: ensure wireshark is at the latest version
+      apt:
+        name: wireshark
+        state: latest
+```
+
+![playbook.yml](<images/playbook yml.jpg>)
 
 Examine the code above and try to make sense out of it. 
 
@@ -368,6 +429,17 @@ git add <selected files>
 ```
 git commit -m "commit message"
 ```
+![update branch repo](<images/update branch repo.jpg>)
+
+![pull request](<images/pull request.jpg>)
+
+![pull](<images/pull request 1.jpg>)
+
+![merge](<images/pull merge.jpg>)
+
+![merge 1](<images/merge 1.jpg>)
+
+![merged](images/merged.jpg)
 
 2. Create a Pull request (PR)
 
