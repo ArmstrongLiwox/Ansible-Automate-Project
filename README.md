@@ -539,6 +539,8 @@ or
 wireshark version
 ```
 
+![playbooked worked](<images/playbook worked.jpg>)
+
 The architecture looks like this:
 
 ![ansible](images/13.jpg)
