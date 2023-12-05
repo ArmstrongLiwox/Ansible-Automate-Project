@@ -110,7 +110,11 @@ ansible --version
 
 ![hook trigger](<images/hook trigger.jpg>)
 
-### Configure a Post-build job to save all (**) files, like you did it in Project 9.
+![crumb error](images/crumb.jpg)
+
+![enable](<images/enable proxy compatibility.jpg>)
+
+### Configure a Post-build job to save all (**) files.
 
 ```
 jenkins-plugin-cli --plugins strict-crumb-issuer:2.1.1
@@ -155,14 +159,19 @@ Now your setup will look like this:
 
 ![nginx diagram](images/nginx.jpg)
 
-> Tip: Every time you stop/start your Jenkins-Ansible server - you have to reconfigure GitHub webhook to a new IP address, in order to avoid it, it makes sense to allocate an Elastic IP to your Jenkins-Ansible server as was done to the LB server in Project 10. 
-Note that Elastic IP is free only when it is being allocated to an EC2 Instance, so do not forget to release Elastic IP once you terminate your EC2 Instance.
+> Tip: Every time you stop/start your Jenkins-Ansible server - you have to reconfigure GitHub webhook to a new IP address, in order to avoid it, it makes sense to allocate an Elastic IP to your Jenkins-Ansible server. 
+
+> Note that Elastic IP is free only when it is being allocated to an EC2 Instance, so do not forget to release Elastic IP once you terminate your EC2 Instance.
+
+
 
 ## Step 2 - Prepare your development environment using Visual Studio Code
 
 1. Here we are require to write some codes with proper tools that will make coding and debugging comfortable - we need an Integrated development environment (IDE) or Source-code Editor. 
 
 we will use Visual Studio Code (VSC).
+
+![remote dev](<images/remote dev.jpg>)
 
 2. I will configure to connect to the newly created GitHub repository.
 
