@@ -155,7 +155,7 @@ sudo cat /var/lib/jenkins/jobs/Ansible/builds/3/archive/README.md
 ```
 ![build 4](<images/build confirm 4.jpg>)
 
-Now your setup will look like this:
+Now the setup will look like this:
 
 ![nginx diagram](images/nginx.jpg)
 
@@ -172,6 +172,8 @@ Now your setup will look like this:
 we will use Visual Studio Code (VSC).
 
 ![remote dev](<images/remote dev.jpg>)
+
+![new branch](<images/new branch.jpg>)
 
 2. I will configure to connect to the newly created GitHub repository.
 
@@ -197,7 +199,10 @@ Tip: Give your branches descriptive and comprehensive names, for example, if you
 5. Within the playbooks folder, create your first playbook, and name it common.yml
 
 6. Within the inventory folder, create an inventory file () for each environment (Development, Staging Testing and Production) dev staging respectively. These inventory files use .ini languages style to configure Ansible hosts.
-Step 4 - Set up an Ansible Inventory
+
+![yml files](<images/yml files.jpg>)
+
+### Step 4 - Set up an Ansible Inventory
 uat, and prod
 
 An Ansible inventory file defines the hosts and groups of hosts upon which commands, modules, and tasks in a playbook operate. Since our intention is to execute Linux commands on remote hosts, and ensure that it is the intended configuration on a particular server that occurs. It is important to have a way to organize our hosts in such an Inventory.
