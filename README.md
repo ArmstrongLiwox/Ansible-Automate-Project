@@ -266,6 +266,24 @@ ssh -A ubuntu@3.120.33.54
 
 > learn how to setup SSH agent and connect VS Code to your Jenkins-Ansible instance
 
+> this worked
+
+```
+eval ssh-agent
+```
+```
+eval `ssh-agent -s`
+```
+```
+ssh-add nfs.pem
+```
+```
+ssh-add -l
+```
+```
+ssh -A ubuntu@3.120.33.54
+```
+
 Also notice, that your Load Balancer user is ```ubuntu``` and user for RHEL-based servers is ```ec2-user```
 Update your ```inventory/dev.yml``` file with this snippet of code:
 
